@@ -1,0 +1,71 @@
+\documentclass[a4paper,10pt]{scrartcl}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{todonotes}
+\usepackage{url}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=1cm,labelindent=1cm}
+
+\include{vars}
+
+%opening
+\author{
+  Expose -- \thesisType\\
+  Department: \department\\
+  \\
+  \authorName \\
+  Matr. Number: \matrNumber \\
+  Desired Work Period: \desiredStartDate \,\,\,- \desiredEndDate \\
+  \email
+  \\
+}
+\title{
+\titleName\\
+\ifCmdExists{subtitleName}{{\small \subtitleName}}{bla}
+}
+
+\include{commands}
+
+\include{hyphenation}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem Definition}
+  Describe the problem you want to investigate and motivate why this should be done.
+
+\section{State of Research}
+  Reference related work and discuss it briefly.
+
+\section{Outline}
+  Write an outline of your Work
+  \begin{enumerate}
+    \item Introduction
+    \begin{enumerate}
+     \item Motivation
+     \item \ldots
+    \end{enumerate}
+    \item Related Work
+    \begin{enumerate}
+     \item First Topic
+     \item Second Topic
+     \item \ldots
+    \end{enumerate}
+    \item \ldots
+    \item Conclusion
+  \end{enumerate}
+
+
+\section{Approach}
+  Explain how you are going to do the work.
+
+% if you want to include references which are not referenced in the text include the following line
+% \nocite{*}
+% if you just want to include single references of the bibtex file list them here
+% \nocite{bibtexkey1, bibtexkey2}
+
+ \bibliographystyle{plain}
+ \bibliography{../references}
+
+\end{document}

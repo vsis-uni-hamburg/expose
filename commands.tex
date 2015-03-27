@@ -1,0 +1,10 @@
+% some usefull commands
+\newcommand{\citeMissing}{[cite missing] \todo{insert cite}}
+\newcommand{\imgMissing}[1]{\vspace{1cm}[image missing: #1]\vspace{1cm} \todo{insert image: #1}}
+\newcommand{\ifCmdExists}[3]{%
+  \ifcsname#1\endcsname%
+    #2
+  \else%
+    #3
+  \fi%
+}
